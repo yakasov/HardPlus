@@ -22,7 +22,14 @@ General
 - The chance for mobs to have enchanted armour has been increased by 1.5x
 
 Cave Spiders
-- Instead of inflicting Poison I for 15 seconds, they now inflict Poison II for 10 seconds.
+- Instead of inflicting Poison I for 15 seconds, they now inflict Poison II for 10 seconds
+
+Dragon
+- Fireballs have an increased radius
+
+Drowned
+- Likely spawn chance increased to 1/10 (from 1/15)
+- Unlikely spawn chance increased to 1/20 (from 1/40)
 
 Endermen
 - Ender Pearl drop chance increased to 66% (from 50%)
@@ -50,6 +57,13 @@ Spiders
 - Chance to have status effects increased to 25% x CRD (from 10% x CRD)
 - Spiders can spawn with Resistance, Fire Resistance, Infested, Oozing or Weaving
 
+Strays
+- No longer require access to the sky to spawn
+- Instead of inflicting Slowness for 30 seconds, they now inflict Slowness II for 20 seconds
+
+Witches
+- Have a 15% chance to use a stronger potion (excl. Poison and Harming)
+
 Zombies
 - Chance to spawn with equipment increased to 15% (from 5%)
 - Can always pick up loot
@@ -72,7 +86,11 @@ On death, dropped experience is equal to half your experience (capped at 1000XP,
 
 ## Structures
 
-5/10 End Crystals are now guarded in The End (from 2/10).
+5/10 End Crystals are now guarded in The End (from 2/10)
+
+The chance for a village to generate as abandoned is roughly 33% (from 2%)
+
+The End Portal will never spawn with any eyes in, requiring all 12 to be obtained
 
 ## World
 
