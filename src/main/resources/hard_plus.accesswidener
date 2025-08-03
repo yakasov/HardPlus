@@ -1,2 +1,3 @@
 accessWidener v2 named
 accessible class net/minecraft/world/gen/feature/EndSpikeFeature$SpikeCache
+accessible class net/minecraft/entity/mob/IllusionerEntity$BlindTargetGoal

@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin.items;
+package com.yakasov.hard_plus.mixin.item.equipment;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.item.equipment.ArmorMaterial;

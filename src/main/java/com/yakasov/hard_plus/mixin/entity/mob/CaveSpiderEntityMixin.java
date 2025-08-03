@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin.mob;
+package com.yakasov.hard_plus.mixin.entity.mob;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.entity.mob.CaveSpiderEntity;

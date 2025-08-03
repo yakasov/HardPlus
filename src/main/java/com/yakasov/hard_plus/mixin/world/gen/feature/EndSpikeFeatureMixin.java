@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin.feature;
+package com.yakasov.hard_plus.mixin.world.gen.feature;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.world.gen.feature.EndSpikeFeature;

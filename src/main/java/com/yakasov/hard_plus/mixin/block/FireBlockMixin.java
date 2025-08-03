@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin;
+package com.yakasov.hard_plus.mixin.block;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.block.FireBlock;

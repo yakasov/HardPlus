@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin;
+package com.yakasov.hard_plus.mixin.world;
 
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.world.Difficulty;

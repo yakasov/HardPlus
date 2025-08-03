@@ -7,7 +7,6 @@ Creepers
 Ender Dragon
 - Breath deals 4 DPH (up from 3)
 - Dragon Fireball deals 9 DPH (up from 6)
-- more caged crystals
 
 Illagers
 - patrol minimum size increased (RD + 2, from RD + 1)
@@ -15,12 +14,6 @@ Illagers
 
 Illusioners
 - can always throw Blindness spells, not requiring RD > 2
-
-Phantoms
-- group size ranges from 2 -> 5 (from 1 -> 4)
-
-Slimes
-- small Slimes deal 0.5 DPH
 
 Skeletons
 - 'inaccuracy' value is 1 (from 2)
@@ -47,9 +40,6 @@ Mob pack sizes max out at 6 (from 4)
 Drowned
 - 1/10 chance to spawn in rivers (from 1/15)
 - 1/20 chance to spawn in oceans (from 1/40)
-
-Ghasts
-- 85% chance of spawn failure (from 95%)
 
 Husks
 - spawn no longer needs sky access

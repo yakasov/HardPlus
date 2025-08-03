@@ -27,17 +27,34 @@ Cave Spiders
 Endermen
 - Ender Pearl drop chance increased to 66% (from 50%)
 
+Ghasts
+- Two Ghasts can spawn per chunk (previously one)
+
+Husks
+- No longer require access to the sky to spawn
+
+Illusioners
+- Can always throw Blindness potions
+
+Phantoms
+- Group size increased to 2 - 6 (from 1 - 4)
+- Max size increased by 2.5x
+
 Piglins
 - Ender Pearls are half as likely to be gained from trading, and will have half the quantity (1 - 2, previously 2 - 4)
 
+Slimes
+- Small Slimes deal 0.5 damage
+
 Spiders
 - Chance to have status effects increased to 25% x CRD (from 10% x CRD)
-- Spiders can spawn with Resistance, Fire Resistance or Health Boost
+- Spiders can spawn with Resistance, Fire Resistance, Infested, Oozing or Weaving
 
 Zombies
 - Chance to spawn with equipment increased to 15% (from 5%)
-- Zombies will always set their target on fire if they are also on fire
-- Zombies always gain a random follow distance bonus, and this bonus is increased by 25%
+- Can always pick up loot
+- Will always set their target on fire if they are also on fire
+- Always gain a random follow distance bonus, and this bonus is increased by 25%
 - Chance for a zombie to be classified as a 'leader' (can summon reinforcements and gains extra health) has been doubled
 
 ## Items

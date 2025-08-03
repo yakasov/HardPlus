@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin.mob;
+package com.yakasov.hard_plus.mixin.entity.mob;
 
 import net.minecraft.entity.mob.ZombieEntity;
 import net.minecraft.world.Difficulty;
@@ -10,6 +10,12 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(ZombieEntity.class)
 public class ZombieEntityMixin {
+    private boolean isHardDifficulty() {
+        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
+
+        return zombieEntity.getWorld().getDifficulty() == Difficulty.HARD;
+    }
+
     @ModifyConstant(
             method = "initEquipment",
             constant = @Constant(
@@ -17,9 +23,7 @@ public class ZombieEntityMixin {
             )
     )
     private float increaseEquipmentChance(float f) {
-        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
-
-        if (zombieEntity.getWorld().getDifficulty() == Difficulty.HARD) {
+        if (isHardDifficulty()) {
             f = 0.15F;
         }
 
@@ -33,9 +37,7 @@ public class ZombieEntityMixin {
             )
     )
     private float ensureFireLightChance(float f) {
-        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
-
-        if (zombieEntity.getWorld().getDifficulty() == Difficulty.HARD) {
+        if (isHardDifficulty()) {
             f = 100.00F;
         }
 
@@ -49,9 +51,7 @@ public class ZombieEntityMixin {
             )
     )
     private double ensureFollowRangeBonus(double d) {
-        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
-
-        if (zombieEntity.getWorld().getDifficulty() == Difficulty.HARD) {
+        if (isHardDifficulty()) {
             d = 0.0;
         }
 
@@ -64,9 +64,7 @@ public class ZombieEntityMixin {
             ordinal = 0
     )
     private double increaseFollowRangeBonus(double d) {
-        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
-
-        if (zombieEntity.getWorld().getDifficulty() == Difficulty.HARD) {
+        if (isHardDifficulty()) {
             d *= 1.25;
         }
 
@@ -80,10 +78,22 @@ public class ZombieEntityMixin {
             )
     )
     private float increaseLeaderChance(float f) {
-        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
-
-        if (zombieEntity.getWorld().getDifficulty() == Difficulty.HARD) {
+        if (isHardDifficulty()) {
             f = 0.1F;
+        }
+
+        return f;
+    }
+
+    @ModifyConstant(
+            method = "initialize",
+            constant = @Constant(
+                    floatValue = 0.55F
+            )
+    )
+    private float ensureZombieCanPickUpLoot(float f) {
+        if (isHardDifficulty()) {
+            f = 100.00F;
         }
 
         return f;

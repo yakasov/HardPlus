@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin.mob;
+package com.yakasov.hard_plus.mixin.entity.mob;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.entity.effect.StatusEffects;
@@ -10,8 +10,10 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+// This Mixin could do with work as it is not difficulty dependent
+// But not sure how to access SpiderEntity from static SpiderData
 @Mixin(SpiderEntity.SpiderData.class)
-public class SpiderDataMixin {
+public class SpiderEntity$SpiderDataMixin {
     @ModifyVariable(
             method = "setEffect",
             at = @At("STORE")
@@ -32,7 +34,11 @@ public class SpiderDataMixin {
         } else if (i == 6) {
             spiderData.effect = StatusEffects.FIRE_RESISTANCE;
         } else if (i == 7) {
-            spiderData.effect = StatusEffects.HEALTH_BOOST;
+            spiderData.effect = StatusEffects.INFESTED;
+        } else if (i == 8) {
+            spiderData.effect = StatusEffects.OOZING;
+        } else if (i == 9) {
+            spiderData.effect = StatusEffects.WEAVING;
         }
     }
 }

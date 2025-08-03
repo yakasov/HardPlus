@@ -1,4 +1,4 @@
-package com.yakasov.hard_plus.mixin.items;
+package com.yakasov.hard_plus.mixin.item;
 
 import net.minecraft.item.ToolMaterial;
 import org.spongepowered.asm.mixin.Mixin;
