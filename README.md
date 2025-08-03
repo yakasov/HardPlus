@@ -15,7 +15,7 @@ These result in Regional Difficulty topping out at about 9 rather than 6.75.
 ## Mobs
 
 General
-- Mobs now have a follow range of 24 blocks, up from 16.
+- Mobs now have a follow range of 24 blocks, up from 16
 - Mobs are willing to take more fall damage to follow a target (roughly 1.25x)
 - The chance for mobs to wear armour has been increased to 95% ^ Piece Number (previously 90% ^ Piece Number)
 - The chance for mobs to wear higher grade armour has been doubled
@@ -23,6 +23,22 @@ General
 
 Cave Spiders
 - Instead of inflicting Poison I for 15 seconds, they now inflict Poison II for 10 seconds.
+
+Endermen
+- Ender Pearl drop chance increased to 66% (from 50%)
+
+Piglins
+- Ender Pearls are half as likely to be gained from trading, and will have half the quantity (1 - 2, previously 2 - 4)
+
+Spiders
+- Chance to have status effects increased to 25% x CRD (from 10% x CRD)
+- Spiders can spawn with Resistance, Fire Resistance or Health Boost
+
+Zombies
+- Chance to spawn with equipment increased to 15% (from 5%)
+- Zombies will always set their target on fire if they are also on fire
+- Zombies always gain a random follow distance bonus, and this bonus is increased by 25%
+- Chance for a zombie to be classified as a 'leader' (can summon reinforcements and gains extra health) has been doubled
 
 ## Items
 

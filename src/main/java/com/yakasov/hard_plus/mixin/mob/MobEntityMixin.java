@@ -9,6 +9,7 @@ import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(MobEntity.class)
 public abstract class MobEntityMixin extends LivingEntity {
@@ -16,12 +17,13 @@ public abstract class MobEntityMixin extends LivingEntity {
         super(entityType, world);
     }
 
-    @Redirect(
+    @Inject(
             method = "createMobAttributes",
-            at = @At("HEAD")
+            at = @At("HEAD"),
+            cancellable = true
     )
-    private static DefaultAttributeContainer.Builder setDefaultFollowRange() {
-        return LivingEntity.createLivingAttributes().add(EntityAttributes.FOLLOW_RANGE, 24.0);
+    private static void setDefaultFollowRange(CallbackInfoReturnable<DefaultAttributeContainer.Builder> cir) {
+        cir.setReturnValue(LivingEntity.createLivingAttributes().add(EntityAttributes.FOLLOW_RANGE, 24.0));
     }
 
     @ModifyArg(
@@ -77,7 +79,8 @@ public abstract class MobEntityMixin extends LivingEntity {
     @ModifyVariable(
             method = "enchantEquipment(Lnet/minecraft/world/ServerWorldAccess;Lnet/minecraft/entity/EquipmentSlot;Lnet/minecraft/util/math/random/Random;FLnet/minecraft/world/LocalDifficulty;)V",
             at = @At("HEAD"),
-            ordinal = 3
+            ordinal = 0,
+            argsOnly = true
     )
     private float increaseEnchantmentPower(float power) {
         MobEntity mobEntity = (MobEntity)(Object)this;

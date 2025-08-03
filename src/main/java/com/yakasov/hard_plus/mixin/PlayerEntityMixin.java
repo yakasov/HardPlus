@@ -21,7 +21,7 @@ public class PlayerEntityMixin {
     )
     private float setDamageMultiplier(float amount, @Local(argsOnly = true) ServerWorld world) {
         if (world.getDifficulty() == Difficulty.HARD) {
-            return amount * (1.0F + (1.0F / 3.0F));
+            amount *= (1.0F + (1.0F / 3.0F));
         }
         return amount;
     }
@@ -33,10 +33,7 @@ public class PlayerEntityMixin {
             name = "f"
     )
     private float setDisableBlocking(float f) {
-        if (f == 0.0F) {
-            return 0.5F;
-        }
-        return f;
+        return Math.max(f, 0.5F);
     }
 
     @Inject(

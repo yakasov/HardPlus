@@ -4,9 +4,6 @@ Creepers
 - when exploding, a potion effect can be spawned randomly
 - have a 5% chance to spawn charged
 
-Endermen
-- always drop an ender pearl
-
 Ender Dragon
 - Breath deals 4 DPH (up from 3)
 - Dragon Fireball deals 9 DPH (up from 6)
@@ -22,9 +19,6 @@ Illusioners
 Phantoms
 - group size ranges from 2 -> 5 (from 1 -> 4)
 
-Piglins
-- ender pearl stack size from bartering reduced to 1 -> 2 (from 2 -> 4)
-
 Slimes
 - small Slimes deal 0.5 DPH
 
@@ -35,20 +29,11 @@ Skeletons
 Strays
 - Slowness II for 20 seconds
 
-Spiders
-- chance to have status effects increased (25% x CRD, from 10% x CRD)
-
 Villagers
 - trading benefit from curing is one-time only
 
 Witches
 - can also throw Blindness and Hunger II potions
-
-Zombies
-- have a 15% chance to spawn with weapons (up from 5%)
-- burning Zombies will always set their target on fire
-- random follow distance bonus increased and is always applied
-- leader chance doubled (10% x CRD, from 5% x CRD)
 
 Zombified Piglins
 - chance to spawn from Nether Portals every tick increased to 6/2000 (from 3/2000)

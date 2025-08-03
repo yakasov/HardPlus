@@ -8,10 +8,13 @@
     "LocalDifficultyMixin",
     "PlayerEntityMixin",
     "feature.EndSpikeFeatureMixin",
-    "items.ArmorMaterialsMixin",
+    "items.ArmorMaterialMixin",
     "items.ToolMaterialMixin",
     "mob.CaveSpiderEntityMixin",
-    "mob.MobEntityMixin"
+    "mob.MobEntityMixin",
+    "mob.SpiderDataMixin",
+    "mob.SpiderEntityMixin",
+    "mob.ZombieEntityMixin"
   ],
   "injectors": {
     "defaultRequire": 1

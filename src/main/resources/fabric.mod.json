@@ -14,7 +14,7 @@
       "com.yakasov.hard_plus.client.Hard_plusDataGenerator"
     ],
     "main": [
-      "com.yakasov.hard_plus.Hard_plus"
+      "com.yakasov.hard_plus.HardPlus"
     ]
   },
   "mixins": [
