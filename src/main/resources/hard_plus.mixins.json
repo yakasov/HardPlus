@@ -18,6 +18,7 @@
     "entity.mob.StrayEntityMixin",
     "entity.mob.WitchEntityMixin",
     "entity.mob.ZombieEntityMixin",
+    "entity.passive.VillagerEntityMixin",
     "entity.player.PlayerEntityMixin",
     "entity.projectile.DragonFireballEntityMixin",
     "item.ToolMaterialMixin",
