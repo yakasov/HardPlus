@@ -5,7 +5,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
-import net.minecraft.world.Difficulty;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
@@ -35,25 +34,21 @@ public class WitchEntityMixin {
             )
     )
     private RegistryEntry<Potion> addBlindnessAndHunger(RegistryEntry<Potion> registryEntry) {
-        WitchEntity witchEntity = (WitchEntity)(Object)this;
+        Random r = new Random();
+        int ri = r.nextInt(100);
 
-        if (witchEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            Random r = new Random();
-            int ri = r.nextInt(100);
+        String currentPotionId = registryEntry.getKey()
+                .map(key -> key.getValue().getPath())
+                .orElse(null);
 
-            String currentPotionId = registryEntry.getKey()
-                    .map(key -> key.getValue().getPath())
-                    .orElse(null);
+        if (currentPotionId != null && potionMap.containsKey(currentPotionId)) {
+            String strongerPotionId = potionMap.get(currentPotionId);
 
-            if (currentPotionId != null && potionMap.containsKey(currentPotionId)) {
-                String strongerPotionId = potionMap.get(currentPotionId);
+            Optional<RegistryEntry.Reference<Potion>> strongerPotionOpt =
+                    Registries.POTION.getEntry(Identifier.ofVanilla(strongerPotionId));
 
-                Optional<RegistryEntry.Reference<Potion>> strongerPotionOpt =
-                        Registries.POTION.getEntry(Identifier.ofVanilla(strongerPotionId));
-
-                if (ri <= 15 && strongerPotionOpt.isPresent()) {
-                    registryEntry = strongerPotionOpt.get();
-                }
+            if (ri <= 15 && strongerPotionOpt.isPresent()) {
+                registryEntry = strongerPotionOpt.get();
             }
         }
 

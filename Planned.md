@@ -16,9 +16,6 @@ Skeletons
 - 'inaccuracy' value is 1 (from 2)
 - can shoot flaming arrows at RD > 2 (from RD > 3)
 
-Villagers
-- trading benefit from curing is one-time only
-
 Zombified Piglins
 - chance to spawn from Nether Portals every tick increased to 6/2000 (from 3/2000)
 
@@ -33,11 +30,3 @@ Mob pack sizes max out at 6 (from 4)
 On death, equipment will lose up to 20% durability (but will not fall below 5%)
 
 On death, a random amount of items will be lost from stacks (but will not fall below 2)
-
-## Progression
-
-???
-
-I plan to force visits to Woodland Mansions (only one visit will be needed) and Trial Chambers (any item added will have a high chance to drop to avoid having to farm them for ages). Maybe also Ocean Monuments and Bastions?
-
-If a visit to a Woodland Mansion is required, they'll be slightly more common (ie their minimum spawning distance requirement will be reduced)

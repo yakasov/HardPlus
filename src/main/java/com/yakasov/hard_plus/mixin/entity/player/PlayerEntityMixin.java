@@ -20,10 +20,7 @@ public class PlayerEntityMixin {
             argsOnly = true
     )
     private float setDamageMultiplier(float amount, @Local(argsOnly = true) ServerWorld world) {
-        if (world.getDifficulty() == Difficulty.HARD) {
-            amount *= (1.0F + (1.0F / 3.0F));
-        }
-        return amount;
+        return amount * (1.0F + (1.0F / 3.0F));
     }
 
     @ModifyVariable(

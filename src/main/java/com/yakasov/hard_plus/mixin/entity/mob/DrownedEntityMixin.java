@@ -2,7 +2,6 @@ package com.yakasov.hard_plus.mixin.entity.mob;
 
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.entity.mob.DrownedEntity;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.ServerWorldAccess;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
@@ -17,11 +16,7 @@ public class DrownedEntityMixin {
             )
     )
     private static int increaseLikelyDrownedSpawns(int i, @Local(argsOnly = true)ServerWorldAccess world) {
-        if (world.getDifficulty() == Difficulty.HARD) {
-            i = 10;
-        }
-
-        return i;
+        return 10;
     }
 
     @ModifyConstant(
@@ -31,10 +26,6 @@ public class DrownedEntityMixin {
             )
     )
     private static int increaseUnlikelyDrownedSpawns(int i, @Local(argsOnly = true)ServerWorldAccess world) {
-        if (world.getDifficulty() == Difficulty.HARD) {
-            i = 20;
-        }
-
-        return i;
+        return 20;
     }
 }

@@ -1,7 +1,6 @@
 package com.yakasov.hard_plus.mixin.entity.mob;
 
 import net.minecraft.entity.mob.ZombieEntity;
-import net.minecraft.world.Difficulty;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Constant;
@@ -10,12 +9,6 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(ZombieEntity.class)
 public class ZombieEntityMixin {
-    private boolean isHardDifficulty() {
-        ZombieEntity zombieEntity = (ZombieEntity)(Object)this;
-
-        return zombieEntity.getWorld().getDifficulty() == Difficulty.HARD;
-    }
-
     @ModifyConstant(
             method = "initEquipment",
             constant = @Constant(
@@ -23,11 +16,7 @@ public class ZombieEntityMixin {
             )
     )
     private float increaseEquipmentChance(float f) {
-        if (isHardDifficulty()) {
-            f = 0.15F;
-        }
-
-        return f;
+        return 0.15F;
     }
 
     @ModifyConstant(
@@ -37,11 +26,7 @@ public class ZombieEntityMixin {
             )
     )
     private float ensureFireLightChance(float f) {
-        if (isHardDifficulty()) {
-            f = 100.00F;
-        }
-
-        return f;
+        return 100.0F;
     }
 
     @ModifyConstant(
@@ -51,11 +36,7 @@ public class ZombieEntityMixin {
             )
     )
     private double ensureFollowRangeBonus(double d) {
-        if (isHardDifficulty()) {
-            d = 0.0;
-        }
-
-        return d;
+        return 0.0;
     }
 
     @ModifyVariable(
@@ -64,11 +45,7 @@ public class ZombieEntityMixin {
             ordinal = 0
     )
     private double increaseFollowRangeBonus(double d) {
-        if (isHardDifficulty()) {
-            d *= 1.25;
-        }
-
-        return d;
+        return d * 1.25;
     }
 
     @ModifyConstant(
@@ -78,11 +55,7 @@ public class ZombieEntityMixin {
             )
     )
     private float increaseLeaderChance(float f) {
-        if (isHardDifficulty()) {
-            f = 0.1F;
-        }
-
-        return f;
+        return 0.1F;
     }
 
     @ModifyConstant(
@@ -92,10 +65,6 @@ public class ZombieEntityMixin {
             )
     )
     private float ensureZombieCanPickUpLoot(float f) {
-        if (isHardDifficulty()) {
-            f = 100.00F;
-        }
-
-        return f;
+        return 100.0F;
     }
 }

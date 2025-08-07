@@ -1,7 +1,6 @@
 package com.yakasov.hard_plus.mixin.entity.projectile;
 
 import net.minecraft.entity.projectile.DragonFireballEntity;
-import net.minecraft.world.Difficulty;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.Constant;
 import org.spongepowered.asm.mixin.injection.ModifyConstant;
@@ -15,12 +14,6 @@ public class DragonFireballEntityMixin {
             )
     )
     private float increaseFireballEffectRadius(float f) {
-        DragonFireballEntity dragonFireballEntity = (DragonFireballEntity)(Object)this;
-
-        if (dragonFireballEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            f = 5.0F;
-        }
-
-        return f;
+        return 0.5F;
     }
 }

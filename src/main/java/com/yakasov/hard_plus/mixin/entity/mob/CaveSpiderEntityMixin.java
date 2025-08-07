@@ -18,10 +18,7 @@ public class CaveSpiderEntityMixin {
             ordinal = 0
     )
     private int setDurationToTen(int i, @Local(argsOnly = true) ServerWorld world) {
-        if (world.getDifficulty() == Difficulty.HARD) {
-            return 10;
-        }
-        return i;
+        return 10;
     }
 
     @ModifyArg(
@@ -34,9 +31,6 @@ public class CaveSpiderEntityMixin {
     )
     private int setAmplifierToTwo(int amplifier, @Local(argsOnly = true) ServerWorld world) {
         // amplifier starts at 0 so 1 is actually 'adding' an extra tier of the status effect
-        if (world.getDifficulty() == Difficulty.HARD) {
-            return 1;
-        }
-        return amplifier;
+        return 1;
     }
 }

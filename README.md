@@ -2,6 +2,8 @@
 
 *Overwrites Hard difficulty!*
 
+Intended for use with [StrongholdEssences](https://github.com/yakasov/StrongholdEssences) (which forces exploration to structures before entering The End)
+
 ## General
 
 Regional Difficulty (and therefore Local Difficulty) scaling has been increased:
@@ -78,11 +80,13 @@ Zombies
 
 ## Player
 
-Damage taken is equal to 2x Normal difficulty (or 1.33x Hard difficulty).
+Damage taken is equal to 2x Normal difficulty (or 1.33x Hard difficulty)
 
-Shields are disabled for 0.5s after blocking *any* attack (they are still disabled for longer if they would be normally).
+Shields are disabled for 0.5s after blocking *any* attack (they are still disabled for longer if they would be normally)
 
 On death, dropped experience is equal to half your experience (capped at 1000XP, ~level 26)
+
+The discount provided to players from villagers has been capped to roughly one and a half cures
 
 ## Structures
 

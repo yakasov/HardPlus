@@ -15,6 +15,6 @@ public class VillagerEntityMixin {
             cancellable = true
     )
     private void capReputation(PlayerEntity player, CallbackInfoReturnable<Integer> cir) {
-        cir.setReturnValue((int) Math.min(0.35, cir.getReturnValue()));
+        cir.setReturnValue(Math.min(35, cir.getReturnValue()));
     }
 }

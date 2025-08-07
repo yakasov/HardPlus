@@ -4,8 +4,6 @@ import net.minecraft.entity.effect.StatusEffectInstance;
 import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.entity.mob.StrayEntity;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.Difficulty;
-import net.minecraft.world.LightType;
 import net.minecraft.world.ServerWorldAccess;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
@@ -22,11 +20,7 @@ public class StrayEntityMixin {
             )
     )
     private static boolean forceIsSkyVisible(ServerWorldAccess world, BlockPos pos) {
-        if (world.getDifficulty() == Difficulty.HARD) {
-            return true;
-        }
-
-        return world.getLightLevel(LightType.SKY, pos) >= 15;
+        return true;
     }
 
     @ModifyArg(
@@ -37,12 +31,6 @@ public class StrayEntityMixin {
             )
     )
     private StatusEffectInstance setAmplifierToTwo(StatusEffectInstance effect) {
-        StrayEntity strayEntity = (StrayEntity)(Object)this;
-
-        if (strayEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            effect = new StatusEffectInstance(StatusEffects.SLOWNESS, 400, 1);
-        }
-
-        return effect;
+        return new StatusEffectInstance(StatusEffects.SLOWNESS, 400, 1);
     }
 }

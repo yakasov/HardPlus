@@ -1,7 +1,6 @@
 package com.yakasov.hard_plus.mixin.entity.mob;
 
 import net.minecraft.entity.mob.GhastEntity;
-import net.minecraft.world.Difficulty;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -15,10 +14,6 @@ public class GhastEntityMixin {
             cancellable = true
     )
     private void increaseLimitPerChunk(CallbackInfoReturnable<Integer> cir) {
-        GhastEntity ghastEntity = (GhastEntity)(Object)this;
-
-        if (ghastEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            cir.setReturnValue(2);
-        }
+        cir.setReturnValue(2);
     }
 }

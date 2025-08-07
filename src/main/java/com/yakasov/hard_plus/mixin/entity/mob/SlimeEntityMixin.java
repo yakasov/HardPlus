@@ -1,7 +1,6 @@
 package com.yakasov.hard_plus.mixin.entity.mob;
 
 import net.minecraft.entity.mob.SlimeEntity;
-import net.minecraft.world.Difficulty;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
@@ -17,8 +16,6 @@ public class SlimeEntityMixin {
     private void allowSmallSlimesToAttack(CallbackInfoReturnable<Boolean> cir) {
         SlimeEntity slimeEntity = (SlimeEntity)(Object)this;
 
-        if (slimeEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            cir.setReturnValue(slimeEntity.canActVoluntarily());
-        }
+        cir.setReturnValue(slimeEntity.canActVoluntarily());
     }
 }

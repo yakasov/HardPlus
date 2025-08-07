@@ -5,7 +5,6 @@ import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.attribute.DefaultAttributeContainer;
 import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.entity.mob.MobEntity;
-import net.minecraft.world.Difficulty;
 import net.minecraft.world.World;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.*;
@@ -35,13 +34,7 @@ public abstract class MobEntityMixin extends LivingEntity {
             index = 0
     )
     private float increaseSafeFallDistance(float par1) {
-        MobEntity mobEntity = (MobEntity)(Object)this;
-
-        if (mobEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            par1 *= 1.25F;
-        }
-
-        return par1;
+        return par1 * 1.25F;
     }
 
     @ModifyVariable(
@@ -51,13 +44,7 @@ public abstract class MobEntityMixin extends LivingEntity {
             ordinal = 0
     )
     private float increaseEquipmentInitChance(float f) {
-        MobEntity mobEntity = (MobEntity)(Object)this;
-
-        if (mobEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            f = 0.05F;
-        }
-
-        return f;
+        return 0.05F;
     }
 
     @ModifyConstant(
@@ -67,13 +54,7 @@ public abstract class MobEntityMixin extends LivingEntity {
             )
     )
     private float increaseEquipmentGradeChance(float f) {
-        MobEntity mobEntity = (MobEntity)(Object)this;
-
-        if (mobEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            f = 0.19f;
-        }
-
-        return f;
+        return 0.19F;
     }
 
     @ModifyVariable(
@@ -83,12 +64,6 @@ public abstract class MobEntityMixin extends LivingEntity {
             argsOnly = true
     )
     private float increaseEnchantmentPower(float power) {
-        MobEntity mobEntity = (MobEntity)(Object)this;
-
-        if (mobEntity.getWorld().getDifficulty() == Difficulty.HARD) {
-            power *= 1.5F;
-        }
-
-        return power;
+        return power * 1.5F;
     }
 }
