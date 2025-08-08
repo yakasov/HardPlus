@@ -66,4 +66,13 @@ public abstract class MobEntityMixin extends LivingEntity {
     private float increaseEnchantmentPower(float power) {
         return power * 1.5F;
     }
+
+    @Inject(
+            method = "getLimitPerChunk",
+            at = @At("HEAD"),
+            cancellable = true
+    )
+    private void increaseLimitPerChunk(CallbackInfoReturnable<Integer> cir) {
+        cir.setReturnValue(6);
+    }
 }

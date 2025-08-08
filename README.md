@@ -17,11 +17,18 @@ These result in Regional Difficulty topping out at about 9 rather than 6.75.
 ## Mobs
 
 General
-- Mobs now have a follow range of 24 blocks, up from 16
+- Mobs now have a follow range of 24 blocks (from 16)
 - Mobs are willing to take more fall damage to follow a target (roughly 1.25x)
-- The chance for mobs to wear armour has been increased to 95% ^ Piece Number (previously 90% ^ Piece Number)
+- Max group spawn size of mobs has been increased to 6 (from 4)
+- The cap on spawns per mob per chunk has been increased to 6 (from 4)
+- The chance for mobs to wear armour has been increased to 95% ^ Piece Number (from 90% ^ Piece Number)
 - The chance for mobs to wear higher grade armour has been doubled
 - The chance for mobs to have enchanted armour has been increased by 1.5x
+
+Bogged
+- Can now rarely spawn outside of swamps
+- Regular attack interval decreased to 1.5s (from 1.75s)
+- Hard attack interval decreased to 1s (from 1.25s)
 
 Cave Spiders
 - Instead of inflicting Poison I for 15 seconds, they now inflict Poison II for 10 seconds
@@ -37,9 +44,10 @@ Endermen
 - Ender Pearl drop chance increased to 66% (from 50%)
 
 Ghasts
-- Two Ghasts can spawn per chunk (previously one)
+- Two Ghasts can spawn per chunk (from one)
 
 Husks
+- Can now rarely spawn outside of deserts
 - No longer require access to the sky to spawn
 
 Illusioners
@@ -60,6 +68,7 @@ Spiders
 - Spiders can spawn with Resistance, Fire Resistance, Infested, Oozing or Weaving
 
 Strays
+- Can now rarely spawn outside of ice biomes
 - No longer require access to the sky to spawn
 - Instead of inflicting Slowness for 30 seconds, they now inflict Slowness II for 20 seconds
 

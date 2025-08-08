@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "block.FireBlockMixin",
+    "entity.mob.BoggedEntityMixin",
     "entity.mob.CaveSpiderEntityMixin",
     "entity.mob.DrownedEntityMixin",
     "entity.mob.GhastEntityMixin",
@@ -30,6 +31,7 @@
     "structure.StrongholdGenerator$PortalRoomMixin",
     "structure.TaigaVillageDataMixin",
     "world.LocalDifficultyMixin",
+    "world.gen.feature.DefaultBiomeFeaturesMixin",
     "world.gen.feature.EndSpikeFeatureMixin",
     "world.spawner.PhantomSpawnerMixin"
   ],
