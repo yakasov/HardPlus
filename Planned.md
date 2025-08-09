@@ -19,12 +19,6 @@ Skeletons
 Zombified Piglins
 - chance to spawn from Nether Portals every tick increased to 6/2000 (from 3/2000)
 
-## Mob Spawning
-
-Mobs have double the chance to spawn (twice a second, from once a second)
-
-Mob pack sizes max out at 6 (from 4)
-
 ## Player
 
 On death, equipment will lose up to 20% durability (but will not fall below 5%)

@@ -5,6 +5,8 @@
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "block.FireBlockMixin",
+    "entity.EntityEquipmentMixin",
+    "entity.mob.AbstractSkeletonEntityMixin",
     "entity.mob.BoggedEntityMixin",
     "entity.mob.CaveSpiderEntityMixin",
     "entity.mob.DrownedEntityMixin",
@@ -21,6 +23,7 @@
     "entity.mob.ZombieEntityMixin",
     "entity.passive.VillagerEntityMixin",
     "entity.player.PlayerEntityMixin",
+    "entity.player.PlayerInventoryMixin",
     "entity.projectile.DragonFireballEntityMixin",
     "item.ToolMaterialMixin",
     "item.equipment.ArmorMaterialMixin",

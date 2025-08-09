@@ -10,8 +10,6 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
-// This Mixin could do with work as it is not difficulty dependent
-// But not sure how to access SpiderEntity from static SpiderData
 @Mixin(SpiderEntity.SpiderData.class)
 public class SpiderEntity$SpiderDataMixin {
     @ModifyVariable(

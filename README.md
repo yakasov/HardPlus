@@ -60,6 +60,10 @@ Phantoms
 Piglins
 - Ender Pearls are half as likely to be gained from trading, and will have half the quantity (1 - 2, previously 2 - 4)
 
+Skeletons
+- Increased bow attack range to 20 blocks (from 15)
+- Can always pick up loot
+
 Slimes
 - Small Slimes deal 0.5 damage
 
@@ -69,6 +73,7 @@ Spiders
 
 Strays
 - Can now rarely spawn outside of ice biomes
+- Can always pick up loot
 - No longer require access to the sky to spawn
 - Instead of inflicting Slowness for 30 seconds, they now inflict Slowness II for 20 seconds
 
@@ -93,9 +98,13 @@ Damage taken is equal to 2x Normal difficulty (or 1.33x Hard difficulty)
 
 Shields are disabled for 0.5s after blocking *any* attack (they are still disabled for longer if they would be normally)
 
-On death, dropped experience is equal to half your experience (capped at 1000XP, ~level 26)
-
 The discount provided to players from villagers has been capped to roughly one and a half cures
+
+Death
+- Dropped experience is equal to half your experience (capped at 1000XP, ~level 26)
+- Any item stack over 3 items has a 50% chance to lose up to 33% of the stack size
+- Any armour piece will lose up to 20% of its durability (but will not go below 1)
+- Any tool has a 50% chance to lose up to 20% of its durability (but will not go below 1)
 
 ## Structures
 
