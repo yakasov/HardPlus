@@ -18,24 +18,11 @@ import java.util.Random;
 
 @Mixin(EntityEquipment.class)
 public class EntityEquipmentMixin {
-    private boolean isEquipped(ItemStack item, PlayerEntity entity) {
-        for (EquipmentSlot equipmentSlot : EquipmentSlot.VALUES) {
-            ItemStack itemStack = entity.getEquippedStack(equipmentSlot);
-            EquippableComponent equippableComponent = itemStack.get(DataComponentTypes.EQUIPPABLE);
-            if (itemStack.isOf(item.getItem()) && equippableComponent != null && equippableComponent.slot() == equipmentSlot) {
-                return true;
-            }
-        }
-
-        return false;
-    }
-
     @Unique
-    private void damageStack(ItemStack stack) {
-        Random random = new Random();
+    private void damageStack(ItemStack stack, Random random) {
         int damageToDeal = random.nextInt((int) Math.floor((double) stack.getMaxDamage() / 5));
 
-        if (stack.getDamage() - damageToDeal < 1) {
+        if ((stack.getMaxDamage() - stack.getDamage()) - damageToDeal < 1) {
             stack.setDamage(stack.getMaxDamage() - 1);
         } else {
             stack.setDamage(stack.getDamage() + damageToDeal);
@@ -50,27 +37,13 @@ public class EntityEquipmentMixin {
             )
     )
     private ItemStack decreaseEquipmentHealth(ItemStack stack, @Local(argsOnly = true) LivingEntity entity) {
-        if (!(entity instanceof PlayerEntity)) {
+        Random random = new Random();
+
+        if (!(entity instanceof PlayerEntity) || random.nextInt(3) == 0) {
             return stack;
         }
 
-        if (
-                (
-                    (
-                        (
-                                stack.isIn(ItemTags.HEAD_ARMOR) || stack.isIn(ItemTags.CHEST_ARMOR) ||
-                                        stack.isIn(ItemTags.LEG_ARMOR) || stack.isIn(ItemTags.FOOT_ARMOR)
-                        ) &&
-                                isEquipped(stack, (PlayerEntity) entity)
-                    ) || (
-                            stack.isIn(ItemTags.PICKAXES) || stack.isIn(ItemTags.AXES) ||
-                                    stack.isIn(ItemTags.SWORDS) || stack.isIn(ItemTags.HOES) ||
-                                    stack.isIn(ItemTags.SHOVELS)
-                    )
-                ) && stack.getDamage() > 1
-        ) {
-            damageStack(stack);
-        }
+        damageStack(stack, random);
 
         return stack;
     }

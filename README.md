@@ -102,9 +102,9 @@ The discount provided to players from villagers has been capped to roughly one a
 
 Death
 - Dropped experience is equal to half your experience (capped at 1000XP, ~level 26)
-- Any item stack over 3 items has a 50% chance to lose up to 33% of the stack size
+- Any item stack over 3 items has a 66% chance to lose up to 33% of the stack size
 - Any armour piece will lose up to 20% of its durability (but will not go below 1)
-- Any tool has a 50% chance to lose up to 20% of its durability (but will not go below 1)
+- Any tool has a 66% chance to lose up to 20% of its durability (but will not go below 1)
 
 ## Structures
 

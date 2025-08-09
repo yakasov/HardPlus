@@ -20,12 +20,21 @@ public class PlayerInventoryMixin {
     private ItemStack decreaseDroppedItemStack(ItemStack stack) {
         Random random = new Random();
 
-        if (stack.getCount() < 3 || random.nextInt(2) == 0) {
+        if (random.nextInt(3) == 0) {
             return stack;
         }
 
-        int upperBound = (int) Math.floor((double) stack.getCount() / 3);
-        stack.decrement(random.nextInt(upperBound));
+        if (stack.getMaxDamage() > 1) {
+            int upperBound = (int) Math.floor((double) (stack.getMaxDamage() - stack.getDamage()) / 3);
+
+            if (upperBound > 0) {
+                int damageToDeal = random.nextInt(upperBound);
+                stack.setDamage(Math.min(stack.getDamage() + damageToDeal, stack.getMaxDamage()) - 1);
+            }
+        } else if (stack.getCount() > 3) {
+            int upperBound = (int) Math.floor((double) stack.getCount() / 3);
+            stack.decrement(random.nextInt(upperBound));
+        }
 
         return stack;
     }

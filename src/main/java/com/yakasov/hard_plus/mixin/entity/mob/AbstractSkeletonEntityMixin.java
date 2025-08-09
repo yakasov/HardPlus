@@ -1,22 +1,26 @@
 package com.yakasov.hard_plus.mixin.entity.mob;
 
+import net.minecraft.entity.ai.goal.BowAttackGoal;
 import net.minecraft.entity.mob.AbstractSkeletonEntity;
+import net.minecraft.entity.mob.HostileEntity;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(AbstractSkeletonEntity.class)
 public class AbstractSkeletonEntityMixin {
-    @ModifyArg(
+    @Redirect(
             method = "<init>",
             at = @At(
                     value = "NEW",
                     target = "net/minecraft/entity/ai/goal/BowAttackGoal"
-            ),
-            index = 0
+            )
     )
-    private float increaseAttackGoalRange(float range) {
-        return 20.0F;
+    private BowAttackGoal<AbstractSkeletonEntity> redirectBowAttackGoal(
+            HostileEntity actor, double speed, int attackInterval, float range
+    ) {
+        return new BowAttackGoal<>((AbstractSkeletonEntity) actor, speed, attackInterval, 20.0F);
     }
 
     @ModifyArg(
