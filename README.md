@@ -118,3 +118,5 @@ The End Portal will never spawn with any eyes in, requiring all 12 to be obtaine
 ## World
 
 Fire has an increased chance to spread (roughly 1.25x Hard difficulty).
+
+Patrols can contain Vindicators (1/4 chance for any given Pillager to be converted)

@@ -11,7 +11,3 @@ Ender Dragon
 Illagers
 - patrol minimum size increased (RD + 2, from RD + 1)
 - patrols will always contain a Vindicator
-
-Skeletons
-- 'inaccuracy' value is 1 (from 2)
-- can shoot flaming arrows at RD > 2 (from RD > 3)
