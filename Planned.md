@@ -15,12 +15,3 @@ Illagers
 Skeletons
 - 'inaccuracy' value is 1 (from 2)
 - can shoot flaming arrows at RD > 2 (from RD > 3)
-
-Zombified Piglins
-- chance to spawn from Nether Portals every tick increased to 6/2000 (from 3/2000)
-
-## Player
-
-On death, equipment will lose up to 20% durability (but will not fall below 5%)
-
-On death, a random amount of items will be lost from stacks (but will not fall below 2)

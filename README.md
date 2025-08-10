@@ -80,6 +80,9 @@ Strays
 Witches
 - Have a 15% chance to use a stronger potion (excl. Poison and Harming)
 
+Zombified Piglin
+- Chance to spawn from Nether Portals doubled 
+
 Zombies
 - Chance to spawn with equipment increased to 15% (from 5%)
 - Can always pick up loot
@@ -109,8 +112,6 @@ Death
 ## Structures
 
 5/10 End Crystals are now guarded in The End (from 2/10)
-
-The chance for a village to generate as abandoned is roughly 33% (from 2%)
 
 The End Portal will never spawn with any eyes in, requiring all 12 to be obtained
 
