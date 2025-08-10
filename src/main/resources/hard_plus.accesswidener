@@ -2,4 +2,5 @@ accessWidener v2 named
 accessible class net/minecraft/world/gen/feature/EndSpikeFeature$SpikeCache
 accessible class net/minecraft/entity/mob/IllusionerEntity$BlindTargetGoal
 accessible field net/minecraft/entity/mob/AbstractSkeletonEntity bowAttackGoal Lnet/minecraft/entity/ai/goal/BowAttackGoal;
-accessible field net/minecraft/entity/ai/goal/BowAttackGoal squaredRange F
+accessible field net/minecraft/entity/Entity dataTracker Lnet/minecraft/entity/data/DataTracker;
+accessible field net/minecraft/entity/mob/CreeperEntity CHARGED Lnet/minecraft/entity/data/TrackedData;

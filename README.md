@@ -33,6 +33,9 @@ Bogged
 Cave Spiders
 - Instead of inflicting Poison I for 15 seconds, they now inflict Poison II for 10 seconds
 
+Creepers
+- Have a 1/40 chance to spawn as Charged Creepers
+
 Dragon
 - Fireballs have an increased radius
 
@@ -117,6 +120,8 @@ The End Portal will never spawn with any eyes in, requiring all 12 to be obtaine
 
 ## World
 
-Fire has an increased chance to spread (roughly 1.25x Hard difficulty).
+Fire has an increased chance to spread (roughly 1.25x Hard difficulty)
 
 Patrols can contain Vindicators (1/4 chance for any given Pillager to be converted)
+
+Patrol minimum size increased by 2

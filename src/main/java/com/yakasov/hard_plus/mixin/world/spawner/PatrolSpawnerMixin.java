@@ -31,4 +31,16 @@ public class PatrolSpawnerMixin {
 
         return value;
     }
+
+    @ModifyVariable(
+            method = "spawn",
+            at = @At(
+                    value = "STORE",
+                    ordinal = 0
+            ),
+            name = "n"
+    )
+    private int increaseRaidSize(int n) {
+        return n + 2;
+    }
 }

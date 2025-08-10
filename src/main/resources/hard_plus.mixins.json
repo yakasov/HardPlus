@@ -10,6 +10,7 @@
     "entity.mob.AbstractSkeletonEntityMixin",
     "entity.mob.BoggedEntityMixin",
     "entity.mob.CaveSpiderEntityMixin",
+    "entity.mob.CreeperEntityMixin",
     "entity.mob.DrownedEntityMixin",
     "entity.mob.GhastEntityMixin",
     "entity.mob.HuskEntityMixin",
