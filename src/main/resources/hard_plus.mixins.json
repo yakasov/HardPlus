@@ -24,6 +24,7 @@
     "entity.mob.WitchEntityMixin",
     "entity.mob.ZombieEntityMixin",
     "entity.passive.VillagerEntityMixin",
+    "entity.player.HungerManagerMixin",
     "entity.player.PlayerEntityMixin",
     "entity.player.PlayerInventoryMixin",
     "entity.projectile.DragonFireballEntityMixin",

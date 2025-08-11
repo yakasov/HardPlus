@@ -35,6 +35,7 @@ Cave Spiders
 
 Creepers
 - Have a 1/40 chance to spawn as Charged Creepers
+- Have a 1/10 chance (increasing with local difficulty) to spawn a lingering effect cloud on explosion
 
 Dragon
 - Fireballs have an increased radius
@@ -105,6 +106,8 @@ Damage taken is equal to 2x Normal difficulty (or 1.33x Hard difficulty)
 Shields are disabled for 0.5s after blocking *any* attack (they are still disabled for longer if they would be normally)
 
 The discount provided to players from villagers has been capped to roughly one and a half cures
+
+Hunger takes twice as long to heal (fast: 0.25s -> 0.5s per heal, slow: 2s -> 4s per heal)
 
 Death
 - Dropped experience is equal to half your experience (capped at 1000XP, ~level 26)

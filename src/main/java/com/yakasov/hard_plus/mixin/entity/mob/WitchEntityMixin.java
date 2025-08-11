@@ -33,7 +33,7 @@ public class WitchEntityMixin {
                     target = "Lnet/minecraft/component/type/PotionContentsComponent;createStack(Lnet/minecraft/item/Item;Lnet/minecraft/registry/entry/RegistryEntry;)Lnet/minecraft/item/ItemStack;"
             )
     )
-    private RegistryEntry<Potion> addBlindnessAndHunger(RegistryEntry<Potion> registryEntry) {
+    private RegistryEntry<Potion> useStrongerPotion(RegistryEntry<Potion> registryEntry) {
         Random r = new Random();
         int ri = r.nextInt(100);
 
