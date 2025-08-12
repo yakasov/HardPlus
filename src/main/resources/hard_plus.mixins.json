@@ -17,6 +17,7 @@
     "entity.mob.IllusionerEntity$BlindTargetGoalMixin",
     "entity.mob.MobEntityMixin",
     "entity.mob.PhantomEntityMixin",
+    "entity.mob.PiglinBrainMixin",
     "entity.mob.SlimeEntityMixin",
     "entity.mob.SpiderEntity$SpiderDataMixin",
     "entity.mob.SpiderEntityMixin",

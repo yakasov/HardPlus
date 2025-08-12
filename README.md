@@ -63,6 +63,7 @@ Phantoms
 
 Piglins
 - Ender Pearls are half as likely to be gained from trading, and will have half the quantity (1 - 2, previously 2 - 4)
+- Will aggro at any player wearing 2 pieces of armour or less (so a minimum of 3 pieces of safe armour are needed)
 
 Skeletons
 - Increased bow attack range to 20 blocks (from 15)
