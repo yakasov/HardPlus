@@ -8,6 +8,7 @@
     "block.NetherPortalBlockMixin",
     "entity.EntityEquipmentMixin",
     "entity.mob.AbstractSkeletonEntityMixin",
+    "entity.mob.BlazeEntity$ShootFireballGoalMixin",
     "entity.mob.BoggedEntityMixin",
     "entity.mob.CaveSpiderEntityMixin",
     "entity.mob.CreeperEntityMixin",

@@ -25,6 +25,10 @@ General
 - The chance for mobs to wear higher grade armour has been doubled
 - The chance for mobs to have enchanted armour has been increased by 1.5x
 
+Blazes
+- Now fire 5 fireballs in one volley (as opposed to 3)
+- Increased cooldown between fireball volleys to 7s (from 5s)
+
 Bogged
 - Can now rarely spawn outside of swamps
 - Regular attack interval decreased to 1.5s (from 1.75s)
