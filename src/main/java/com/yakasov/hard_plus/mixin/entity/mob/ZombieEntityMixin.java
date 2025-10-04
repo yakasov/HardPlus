@@ -55,7 +55,7 @@ public class ZombieEntityMixin {
             )
     )
     private float increaseLeaderChance(float f) {
-        return 0.1F;
+        return 0.075F;
     }
 
     @ModifyConstant(

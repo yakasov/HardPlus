@@ -10,19 +10,12 @@
   "icon": "assets/hard_plus/icon.png",
   "environment": "*",
   "entrypoints": {
-    "fabric-datagen": [
-      "com.yakasov.hard_plus.client.Hard_plusDataGenerator"
-    ],
     "main": [
       "com.yakasov.hard_plus.HardPlus"
     ]
   },
   "mixins": [
-    "hard_plus.mixins.json",
-    {
-      "config": "hard_plus.client.mixins.json",
-      "environment": "client"
-    }
+    "hard_plus.mixins.json"
   ],
   "depends": {
     "fabricloader": ">=${loader_version}",

@@ -16,17 +16,10 @@ loom {
     mods {
         "hard_plus" {
             sourceSet sourceSets.main
-            sourceSet sourceSets.client
         }
     }
 
     accessWidenerPath = file("src/main/resources/hard_plus.accesswidener")
-}
-
-fabricApi {
-    configureDataGeneration {
-        client = true
-    }
 }
 
 repositories {

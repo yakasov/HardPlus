@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import java.util.Random;
 
 @Mixin(PatrolSpawner.class)
-public class PatrolSpawnerMixin {
+public class unused_PatrolSpawnerMixin {
     @ModifyVariable(
             method = "spawnPillager",
             at = @At(

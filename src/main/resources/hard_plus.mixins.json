@@ -34,10 +34,10 @@
     "item.equipment.ArmorMaterialMixin",
     "structure.StrongholdGenerator$PortalRoomMixin",
     "world.LocalDifficultyMixin",
-    "world.gen.feature.DefaultBiomeFeaturesMixin",
-    "world.gen.feature.EndSpikeFeatureMixin",
-    "world.spawner.PatrolSpawnerMixin",
-    "world.spawner.PhantomSpawnerMixin"
+    "world.gen.feature.DefaultBiomeFeaturesMixin"
+//    "world.gen.feature.EndSpikeFeatureMixin",
+//    "world.spawner.PatrolSpawnerMixin",
+//    "world.spawner.PhantomSpawnerMixin"
   ],
   "injectors": {
     "defaultRequire": 1

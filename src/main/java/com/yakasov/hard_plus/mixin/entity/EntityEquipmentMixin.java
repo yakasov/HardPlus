@@ -1,14 +1,10 @@
 package com.yakasov.hard_plus.mixin.entity;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.EquippableComponent;
 import net.minecraft.entity.EntityEquipment;
-import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
-import net.minecraft.registry.tag.ItemTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
@@ -20,12 +16,16 @@ import java.util.Random;
 public class EntityEquipmentMixin {
     @Unique
     private void damageStack(ItemStack stack, Random random) {
-        int damageToDeal = random.nextInt((int) Math.floor((double) stack.getMaxDamage() / 5));
+        int damageToDealBound = (int) Math.floor((double) stack.getMaxDamage() / 5);
 
-        if ((stack.getMaxDamage() - stack.getDamage()) - damageToDeal < 1) {
-            stack.setDamage(stack.getMaxDamage() - 1);
-        } else {
-            stack.setDamage(stack.getDamage() + damageToDeal);
+        if (damageToDealBound > 0) {
+            int damageToDeal = random.nextInt((int) Math.floor((double) stack.getMaxDamage() / 5));
+
+            if ((stack.getMaxDamage() - stack.getDamage()) - damageToDeal < 1) {
+                stack.setDamage(stack.getMaxDamage() - 1);
+            } else {
+                stack.setDamage(stack.getDamage() + damageToDeal);
+            }
         }
     }
 

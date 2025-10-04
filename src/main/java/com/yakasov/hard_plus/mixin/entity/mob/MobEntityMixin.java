@@ -50,11 +50,11 @@ public abstract class MobEntityMixin extends LivingEntity {
     @ModifyConstant(
             method = "initEquipment",
             constant = @Constant(
-                    floatValue = 0.095F
+                    floatValue = 0.1F
             )
     )
     private float increaseEquipmentGradeChance(float f) {
-        return 0.19F;
+        return 0.2F;
     }
 
     @ModifyVariable(

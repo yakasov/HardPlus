@@ -7,7 +7,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(EndSpikeFeature.SpikeCache.class)
-public class EndSpikeFeatureMixin {
+public class unused_EndSpikeFeatureMixin {
     @ModifyVariable(
             method = "load(Ljava/lang/Long;)Ljava/util/List;",
             at = @At("STORE"),

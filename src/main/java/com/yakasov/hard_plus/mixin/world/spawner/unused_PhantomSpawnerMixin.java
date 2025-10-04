@@ -9,7 +9,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 
 @Mixin(PhantomSpawner.class)
-public class PhantomSpawnerMixin {
+public class unused_PhantomSpawnerMixin {
     @ModifyVariable(
             method = "spawn",
             at = @At("STORE"),

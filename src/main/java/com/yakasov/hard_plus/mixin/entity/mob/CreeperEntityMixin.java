@@ -1,7 +1,6 @@
 package com.yakasov.hard_plus.mixin.entity.mob;
 
 import net.minecraft.component.type.PotionContentsComponent;
-import net.minecraft.entity.AreaEffectCloudEntity;
 import net.minecraft.entity.EntityData;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.SpawnReason;
@@ -14,7 +13,6 @@ import net.minecraft.potion.Potion;
 import net.minecraft.potion.Potions;
 import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.server.world.ServerWorld;
-import net.minecraft.util.hit.HitResult;
 import net.minecraft.util.math.random.Random;
 import net.minecraft.world.LocalDifficulty;
 import net.minecraft.world.ServerWorldAccess;
@@ -80,7 +78,7 @@ public class CreeperEntityMixin extends HostileEntity {
         CreeperEntity creeperEntity = (CreeperEntity)(Object)this;
         java.util.Random random = new java.util.Random();
 
-        World world = creeperEntity.getWorld();
+        World world = creeperEntity.getEntityWorld();
         float localDifficulty = world.getLocalDifficulty(creeperEntity.getBlockPos()).getLocalDifficulty();
 
         if (random.nextInt(100) < 10 + localDifficulty * 2) {
@@ -94,7 +92,7 @@ public class CreeperEntityMixin extends HostileEntity {
             );
 
             lingeringPotionEntity.spawnAreaEffectCloud(
-                    (ServerWorld) creeperEntity.getWorld(),
+                    (ServerWorld) creeperEntity.getEntityWorld(),
                     potion,
                     creeperEntity.raycast(0, 0, false)
             );

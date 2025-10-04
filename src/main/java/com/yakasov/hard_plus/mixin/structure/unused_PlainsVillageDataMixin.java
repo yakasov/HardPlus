@@ -19,7 +19,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.List;
 
 @Mixin(PlainsVillageData.class)
-public class PlainsVillageDataMixin {
+public class unused_PlainsVillageDataMixin {
     @Redirect(
             method = "bootstrap",
             at = @At(

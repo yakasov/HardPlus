@@ -14,6 +14,6 @@ public class DragonFireballEntityMixin {
             )
     )
     private float increaseFireballEffectRadius(float f) {
-        return 0.5F;
+        return 5.0F;
     }
 }

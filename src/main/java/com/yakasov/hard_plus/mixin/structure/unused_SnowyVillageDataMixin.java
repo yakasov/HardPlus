@@ -10,8 +10,6 @@ import net.minecraft.structure.SnowyVillageData;
 import net.minecraft.structure.pool.StructurePool;
 import net.minecraft.structure.pool.StructurePoolElement;
 import net.minecraft.structure.pool.StructurePools;
-import net.minecraft.structure.processor.StructureProcessorList;
-import net.minecraft.structure.processor.StructureProcessorLists;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Redirect;
@@ -19,7 +17,7 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 import java.util.List;
 
 @Mixin(SnowyVillageData.class)
-public class SnowyVillageDataMixin {
+public class unused_SnowyVillageDataMixin {
     @Redirect(
             method = "bootstrap",
             at = @At(

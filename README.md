@@ -62,7 +62,6 @@ Illusioners
 - Can always throw Blindness potions
 
 Phantoms
-- Group size increased to 2 - 6 (from 1 - 4)
 - Max size increased by 2.5x
 
 Piglins
@@ -97,7 +96,7 @@ Zombies
 - Can always pick up loot
 - Will always set their target on fire if they are also on fire
 - Always gain a random follow distance bonus, and this bonus is increased by 25%
-- Chance for a zombie to be classified as a 'leader' (can summon reinforcements and gains extra health) has been doubled
+- Chance for a zombie to be classified as a 'leader' (can summon reinforcements and gains extra health) has been increased
 
 ## Items
 
@@ -122,14 +121,8 @@ Death
 
 ## Structures
 
-5/10 End Crystals are now guarded in The End (from 2/10)
-
 The End Portal will never spawn with any eyes in, requiring all 12 to be obtained
 
 ## World
 
 Fire has an increased chance to spread (roughly 1.25x Hard difficulty)
-
-Patrols can contain Vindicators (1/4 chance for any given Pillager to be converted)
-
-Patrol minimum size increased by 2
