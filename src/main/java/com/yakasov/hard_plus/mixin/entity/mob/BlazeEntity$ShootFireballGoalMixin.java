@@ -20,10 +20,10 @@ public class BlazeEntity$ShootFireballGoalMixin {
     @ModifyConstant(
             method = "tick",
             constant = @Constant(
-                    intValue = 100
+                    intValue = 6
             )
     )
-    private int increaseFireballCooldown(int i) {
-        return 140;
+    private int decreaseTimeBetweenFireballs(int i) {
+        return 4;
     }
 }

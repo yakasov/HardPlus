@@ -34,14 +34,14 @@ public class DefaultBiomeFeaturesMixin {
             int skeletonWeight, boolean drowned,
             CallbackInfo ci
     ) {
-        builder.spawn(SpawnGroup.MONSTER, 15,
-                new SpawnSettings.SpawnEntry(EntityType.BOGGED, 2, 2)
+        builder.spawn(SpawnGroup.MONSTER, 50,
+                new SpawnSettings.SpawnEntry(EntityType.BOGGED, 3, 1)
         );
-        builder.spawn(SpawnGroup.MONSTER, 15,
-                new SpawnSettings.SpawnEntry(EntityType.HUSK, 2, 2)
+        builder.spawn(SpawnGroup.MONSTER, 50,
+                new SpawnSettings.SpawnEntry(EntityType.HUSK, 3, 1)
         );
-        builder.spawn(SpawnGroup.MONSTER, 15,
-                new SpawnSettings.SpawnEntry(EntityType.STRAY, 2, 2)
+        builder.spawn(SpawnGroup.MONSTER, 50,
+                new SpawnSettings.SpawnEntry(EntityType.STRAY, 3, 1)
         );
     }
 

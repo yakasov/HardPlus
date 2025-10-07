@@ -27,7 +27,7 @@ General
 
 Blazes
 - Now fire 5 fireballs in one volley (as opposed to 3)
-- Increased cooldown between fireball volleys to 7s (from 5s)
+- Decreased time between fireballs to 0.2s (from 0.25s)
 
 Bogged
 - Can now rarely spawn outside of swamps
@@ -126,3 +126,5 @@ The End Portal will never spawn with any eyes in, requiring all 12 to be obtaine
 ## World
 
 Fire has an increased chance to spread (roughly 1.25x Hard difficulty)
+
+Lightning has a 2.5x chance to strike
